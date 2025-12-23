@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.baitap11.viewmodel.AppViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/tvRegTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register Account"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/etRegUser"/>
+
+        <EditText
+            android:id="@+id/etRegUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Choose Username"
+            app:layout_constraintTop_toBottomOf="@+id/tvRegTitle"
+            app:layout_constraintBottom_toTopOf="@+id/etRegPass"/>
+
+        <EditText
+            android:id="@+id/etRegPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Choose Password"
+            android:inputType="textPassword"
+            app:layout_constraintTop_toBottomOf="@+id/etRegUser"
+            app:layout_constraintBottom_toTopOf="@+id/btnRegister"/>
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            app:layout_constraintTop_toBottomOf="@+id/etRegPass" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
